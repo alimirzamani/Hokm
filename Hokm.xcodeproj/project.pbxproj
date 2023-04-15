@@ -65,10 +65,10 @@
 		0F00F04F29EAB6B300907183 /* Hokm */ = {
 			isa = PBXGroup;
 			children = (
-				0F00F05E29EAC0A900907183 /* Enums */,
+				0F00F05E29EAC0A900907183 /* Enum */,
 				0F00F05B29EAC08900907183 /* Model */,
+				0F00F06329EAC5A100907183 /* Struct */,
 				0F00F05029EAB6B300907183 /* main.swift */,
-				0F00F05729EABFCB00907183 /* Hokm.swift */,
 			);
 			path = Hokm;
 			sourceTree = "<group>";
@@ -81,13 +81,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0F00F05E29EAC0A900907183 /* Enums */ = {
+		0F00F05E29EAC0A900907183 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
 				0F00F05F29EAC0B800907183 /* CardType.swift */,
 				0F00F06129EAC12B00907183 /* CardValue.swift */,
 			);
-			path = Enums;
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		0F00F06329EAC5A100907183 /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				0F00F05729EABFCB00907183 /* Hokm.swift */,
+			);
+			path = Struct;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
