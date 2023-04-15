@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0F00F05129EAB6B300907183 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F05029EAB6B300907183 /* main.swift */; };
+		0F00F05829EABFCB00907183 /* Hokm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F05729EABFCB00907183 /* Hokm.swift */; };
+		0F00F05D29EAC09100907183 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F05C29EAC09100907183 /* Card.swift */; };
+		0F00F06029EAC0B800907183 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F05F29EAC0B800907183 /* CardType.swift */; };
+		0F00F06229EAC12B00907183 /* CardValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F06129EAC12B00907183 /* CardValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		0F00F04D29EAB6B300907183 /* Hokm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hokm; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F00F05029EAB6B300907183 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0F00F05729EABFCB00907183 /* Hokm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hokm.swift; sourceTree = "<group>"; };
+		0F00F05C29EAC09100907183 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		0F00F05F29EAC0B800907183 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		0F00F06129EAC12B00907183 /* CardValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,29 @@
 		0F00F04F29EAB6B300907183 /* Hokm */ = {
 			isa = PBXGroup;
 			children = (
+				0F00F05E29EAC0A900907183 /* Enums */,
+				0F00F05B29EAC08900907183 /* Model */,
 				0F00F05029EAB6B300907183 /* main.swift */,
+				0F00F05729EABFCB00907183 /* Hokm.swift */,
 			);
 			path = Hokm;
+			sourceTree = "<group>";
+		};
+		0F00F05B29EAC08900907183 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F00F05C29EAC09100907183 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F00F05E29EAC0A900907183 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0F00F05F29EAC0B800907183 /* CardType.swift */,
+				0F00F06129EAC12B00907183 /* CardValue.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F00F05829EABFCB00907183 /* Hokm.swift in Sources */,
 				0F00F05129EAB6B300907183 /* main.swift in Sources */,
+				0F00F06029EAC0B800907183 /* CardType.swift in Sources */,
+				0F00F05D29EAC09100907183 /* Card.swift in Sources */,
+				0F00F06229EAC12B00907183 /* CardValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

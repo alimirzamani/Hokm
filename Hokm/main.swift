@@ -7,5 +7,5 @@
 
 import Foundation
 
-print("Hello, World!")
-
+let hokm = Hokm()
+hokm.printCards()
