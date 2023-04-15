@@ -21,10 +21,12 @@ struct Hokm {
     }()
 
     // MARK: - Variables
-    var playersWithTheirCards: [Int: [Card]] = [:]
+    private var playersWithTheirCards: [Int: [Card]] = [:]
+    private var hakem: Int // For now hakem in the start is you
 
     // MARK: - Initializers
-    init() {
+    init(hakem: Int = 0) {
+        self.hakem = hakem
         deal()
     }
 
@@ -32,6 +34,6 @@ struct Hokm {
     private mutating func deal() {
         let shuffledCards = cards.shuffled()
         let dealer = Dealer(cards: shuffledCards)
-        playersWithTheirCards = dealer.deal()
+        playersWithTheirCards = dealer.deal(with: hakem)
     }
 }
