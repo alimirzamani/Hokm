@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct Card {
+struct Card: Comparable {
     let type: CardType
     let value: CardValue
 
     var symbol: String {
         return "\(value.symbol)\(type.emoji)"
+    }
+
+    static func < (lhs: Card, rhs: Card) -> Bool {
+        return lhs.value < rhs.value
     }
 }

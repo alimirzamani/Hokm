@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CardValue: CaseIterable {
+enum CardValue: CaseIterable, Comparable {
     case ace
     case king
     case queen

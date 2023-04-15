@@ -7,4 +7,10 @@
 
 import Foundation
 
-let hokm = Hokm()
+var hokm = Hokm()
+hokm.deal()
+
+hokm.determineHokm()
+if let roundHokm = hokm.hokm {
+    print("Hokm is: \(roundHokm.type.emoji)")
+}
