@@ -13,6 +13,7 @@
 		0F00F06029EAC0B800907183 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F05F29EAC0B800907183 /* CardType.swift */; };
 		0F00F06229EAC12B00907183 /* CardValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F06129EAC12B00907183 /* CardValue.swift */; };
 		0F00F06529EAD06500907183 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F06429EAD06500907183 /* Dealer.swift */; };
+		0F00F06729EAF47C00907183 /* RoundCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F06629EAF47C00907183 /* RoundCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		0F00F05F29EAC0B800907183 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 		0F00F06129EAC12B00907183 /* CardValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValue.swift; sourceTree = "<group>"; };
 		0F00F06429EAD06500907183 /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
+		0F00F06629EAF47C00907183 /* RoundCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				0F00F05C29EAC09100907183 /* Card.swift */,
+				0F00F06629EAF47C00907183 /* RoundCard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				0F00F06529EAD06500907183 /* Dealer.swift in Sources */,
 				0F00F06029EAC0B800907183 /* CardType.swift in Sources */,
 				0F00F05D29EAC09100907183 /* Card.swift in Sources */,
+				0F00F06729EAF47C00907183 /* RoundCard.swift in Sources */,
 				0F00F06229EAC12B00907183 /* CardValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

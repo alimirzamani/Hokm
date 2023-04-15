@@ -14,3 +14,5 @@ hokm.determineHokm()
 if let roundHokm = hokm.hokm {
     print("Hokm is: \(roundHokm.type.emoji)")
 }
+
+hokm.play()
