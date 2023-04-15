@@ -12,6 +12,7 @@ enum CardValue: CaseIterable {
     case king
     case queen
     case jack
+    case ten
     case nine
     case eight
     case seven
@@ -34,6 +35,9 @@ enum CardValue: CaseIterable {
 
         case .jack:
             return "J"
+
+        case .ten:
+            return "10"
 
         case .nine:
             return "9"

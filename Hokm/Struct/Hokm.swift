@@ -8,6 +8,8 @@
 import Foundation
 
 struct Hokm {
+
+    // MARK: - Constants
     private let cards: [Card] = {
         var cards = [Card]()
         for type in CardType.allCases {
@@ -18,9 +20,18 @@ struct Hokm {
         return cards
     }()
 
-    func printCards() {
-        for card in cards {
-            print(card.symbol)
-        }
+    // MARK: - Variables
+    var playersWithTheirCards: [Int: [Card]] = [:]
+
+    // MARK: - Initializers
+    init() {
+        deal()
+    }
+
+    // MARK: - Functions
+    private mutating func deal() {
+        let shuffledCards = cards.shuffled()
+        let dealer = Dealer(cards: shuffledCards)
+        playersWithTheirCards = dealer.deal()
     }
 }
