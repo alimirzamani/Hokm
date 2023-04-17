@@ -26,6 +26,8 @@ struct Hokm {
     private(set) var hokm: Card?
     private var rounds: [[RoundCard]] = []
     private var roundStartPlayer: Int
+    private var team02Score: Int = 0
+    private var team13Score: Int = 0
 
     // MARK: - Initializers
     init(hakem: Int = 0) {
@@ -71,6 +73,25 @@ struct Hokm {
 
         let round = [first, second, third, forth]
         rounds.append(round)
+
+        let winnerPlayer = roundWinnerPlayer(round: round)
+        if winnerPlayer == 0 || winnerPlayer == 2 {
+            team02Score += 1
+        } else {
+            team13Score += 1
+        }
+
+        roundStartPlayer = winnerPlayer
+    }
+
+    private func roundWinnerPlayer(round: [RoundCard]) -> Int {
+        // TODO: Is not correct
+        let sortedRound = round.sorted { lhs, rhs in
+            return lhs.card < rhs.card
+        }
+
+        guard let winner = sortedRound.first?.player else { fatalError() }
+        return winner
     }
 
     private func firstCardOfRound(player: Int) -> RoundCard {
