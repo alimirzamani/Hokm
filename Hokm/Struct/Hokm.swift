@@ -50,31 +50,36 @@ struct Hokm {
     }
 
     mutating func play() {
-        playRound()
+        for round in 0 ..< 13 {
+            playRound(round: round)
+        }
     }
 
-    mutating func playRound() {
-        print("First hakem should pass a cart")
-        let first = firstCardOfRound(player: roundStartPlayer)
-        let backSuit = first.card.type
-        print(first.card.symbol)
+    mutating func playRound(round: Int) {
+        print("--- Start of Round \(round + 1) ---")
 
-        print("second player")
-        let second = getCard(type: backSuit, player: 1)
-        print(second.card.symbol)
-        
-        print("teammate player")
-        let third = getCard(type: backSuit, player: 2)
-        print(third.card.symbol)
+        var roundCards = [RoundCard]()
+        var backSuit: CardType?
+        for turn in 0 ..< 4 {
+            var player = roundStartPlayer + turn
+            if player > 3 {
+                player -= 4
+            }
 
-        print("fourth player")
-        let forth = getCard(type: backSuit, player: 3)
-        print(forth.card.symbol)
+            if let backSuit {
+                let card = getCard(type: backSuit, player: player)
+                roundCards.append(card)
+                print("Player \(player): \(card.card.symbol)")
+            } else {
+                let card = firstCardOfRound(player: player)
+                roundCards.append(card)
+                print("Player \(player): \(card.card.symbol)")
+                backSuit = card.card.type
+            }
+        }
 
-        let round = [first, second, third, forth]
-        rounds.append(round)
-
-        let winnerPlayer = roundWinnerPlayer(round: round)
+        let winnerPlayer = roundWinnerPlayer(round: roundCards)
+        print("Round Winner: \(winnerPlayer)")
         if winnerPlayer == 0 || winnerPlayer == 2 {
             team02Score += 1
         } else {
@@ -82,6 +87,8 @@ struct Hokm {
         }
 
         roundStartPlayer = winnerPlayer
+        removeRoundCards(roundCards)
+        print("--- End of Round ---")
     }
 
     private func roundWinnerPlayer(round: [RoundCard]) -> Int {
@@ -92,6 +99,17 @@ struct Hokm {
 
         guard let winner = sortedRound.first?.player else { fatalError() }
         return winner
+    }
+
+    private mutating func removeRoundCards(_ roundCards: [RoundCard]) {
+        for roundCard in roundCards {
+            let player = roundCard.player
+            var cards = getCards(of: player)
+            cards.removeAll { card in
+                return card == roundCard.card
+            }
+            playersWithTheirCards[player] = cards
+        }
     }
 
     private func firstCardOfRound(player: Int) -> RoundCard {
